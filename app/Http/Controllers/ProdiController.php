@@ -33,6 +33,13 @@ class ProdiController extends Controller
 
     	return "data tersimpan";
 
+        $validatedData = $request->validate([
+        'nama_prodi' => 'required|max:20',
+        'jenjang' => 'required|max:20',
+        'prodi_id' => 'required|max:10',
+        
+    ]);
+
     }
 
     public function update(Request $request, $id){
@@ -44,6 +51,13 @@ class ProdiController extends Controller
     	$prodi->save();
 
     	return "data update";
+        
+        $validatedData = $request->validate([
+        'nama_prodi' => 'required|max:20',
+        'jenjang' => 'required|max:20',
+        'prodi_id' => 'required|max:10',
+        
+    ]);
     }
 
      public function delete($id){

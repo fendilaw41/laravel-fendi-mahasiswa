@@ -26,10 +26,16 @@ public function fakultas(){
     	$fakultas->nama_fak=$request->nama_fak;
     	$fakultas->jml_sks=$request->jml_sks;
     	$fakultas->jml_semester=$request->jml_semester;
- 
     	$fakultas->save();
 
     	return "data tersimpan";
+
+    	 $validatedData = $request->validate([
+        'nama_fak' => 'required|max:20',
+        'jml_sks' => 'required|max:3',
+        'jml_semester' => 'required|max:4',
+        
+    ]);
 
     }
 
@@ -38,10 +44,17 @@ public function fakultas(){
     	$fakultas->nama_fak=$request->nama_fak;
     	$fakultas->jml_sks=$request->jml_sks;
     	$fakultas->jml_semester=$request->jml_semester;
-    	
     	$fakultas->save();
 
     	return "data update";
+
+    	 $validatedData = $request->validate([
+        'nama_fak' => 'required|max:20',
+        'jml_sks' => 'required|max:3',
+        'jml_semester' => 'required|max:4',
+        
+    ]);
+    	 
     }
 
      public function delete($id){

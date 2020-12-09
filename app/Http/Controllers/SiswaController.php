@@ -22,6 +22,14 @@ class SiswaController extends Controller
     }
 
     public function create(Request $request){
+        
+         $validatedData = $request->validate([
+        'nama_siswa' => 'required|max:20',
+        'jenis_kelamin' => 'required|max:10',
+        'prodi_id' => 'required|max:10',
+        
+    ]);
+
     	$siswa=new Siswa();
         $siswa->nama_siswa=$request->nama_siswa;
         $siswa->jenis_kelamin=$request->jenis_kelamin;
@@ -42,6 +50,13 @@ class SiswaController extends Controller
     	$siswa->save();
 
     	return "data update";
+
+         $validatedData = $request->validate([
+        'nama_siswa' => 'required|max:20',
+        'jenis_kelamin' => 'required|max:10',
+        'prodi_id' => 'required|max:10',
+        
+    ]);
     }
 
      public function delete($id){
