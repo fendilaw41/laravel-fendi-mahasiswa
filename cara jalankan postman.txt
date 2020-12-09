@@ -1,0 +1,16 @@
+//siswa
+POST = CREATE http://127.0.0.1:8000/api/siswa?prodi_id=s2
+GET = READ http://127.0.0.1:8000/api/siswa
+PUT = UPDATE http://127.0.0.1:8000/api/siswa?prodi_id=s3
+GET=DETAIL http://127.0.0.1:8000/api/siswa/1
+DELETE=HAPUS http://127.0.0.1:8000/api/siswa/1
+
+//prodi
+POST = CREATE http://127.0.0.1:8000/api/prodi?id=1&fakultas_id=003Fak
+GET = READ http://127.0.0.1:8000/api/prodi
+PUT = UPDATE http://127.0.0.1:8000/api/prodi?id=1&fakultas_id=003Fak
+GET=DETAIL http://127.0.0.1:8000/api/prodi/1
+DELETE=HAPUS http://127.0.0.1:8000/api/prodi/1
+
+//fakultas
+POST = CREATE http://127.0.0.1:8000/api/fakultas
